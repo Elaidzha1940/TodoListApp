@@ -21,8 +21,7 @@ struct ListView: View {
         VStack {
             List {
                 ForEach(items) { item in
-                    Text("Hey")
-                    //ListRowView(title: item)
+                    ListRowView(item: item)
                 }
             }
             .listStyle(PlainListStyle())
