@@ -21,11 +21,23 @@ struct AddView: View {
                     .padding(.horizontal)
                     .frame(height: 55)
                     .background(Color.gray.opacity(0.5))
-                .cornerRadius(15)
+                    .cornerRadius(15)
+                
+                Button(action: {
+                    //action
+                }, label: {
+                    Text("Save")
+                        .font(.system(size: 20, weight: .semibold, design: .rounded))
+                        .frame(height: 55)
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(15)
+                })
             }
             .padding(10)
         }
-        .navigationTitle("Add")
+        .navigationTitle("Add an Item!")
     }
 }
 

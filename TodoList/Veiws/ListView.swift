@@ -24,12 +24,12 @@ struct ListView: View {
                     ListRowView(title: item)
                 }
             }
-            .listStyle(InsetGroupedListStyle())
+            .listStyle(PlainListStyle())
             .navigationTitle("Todo List 🖋️")
             .navigationBarItems(
                 leading: EditButton(),
                 trailing:
-                    NavigationLink("Add", destination: Text("destination"))
+                    NavigationLink("Add", destination: AddView())
             )
             .font(.system(size: 20, weight: .semibold, design: .rounded))
         }
