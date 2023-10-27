@@ -6,10 +6,11 @@
 //  Date: 27.10.2023
 //
 //  */
+
 import Foundation
 
 //Immutable Struct
-struct ItemModel: Identifiable {
+struct ItemModel: Identifiable, Codable {
     
     var id: String = UUID().uuidString
     let title: String
