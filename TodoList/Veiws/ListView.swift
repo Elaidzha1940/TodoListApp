@@ -10,11 +10,7 @@
 import SwiftUI
 
 struct ListView: View {
-    @State var items: [ItemModel] = [
-        ItemModel(title: "first", isComplete: false),
-        ItemModel(title: "second", isComplete: true),
-        ItemModel(title: "third", isComplete: false),
-    ]
+    @EnvironmentObject var listViewModel: ListViewModel
     
     var body: some View {
         
