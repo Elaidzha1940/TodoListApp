@@ -20,7 +20,7 @@ struct ListView: View {
                     ListRowView(item: item)
                         .onTapGesture {
                             withAnimation(.linear) {
-                                <#code#>
+                                listViewModel.updateItem(item: item)
                             }
                         }
                 }

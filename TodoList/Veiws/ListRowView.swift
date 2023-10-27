@@ -15,8 +15,8 @@ struct ListRowView: View {
     var body: some View {
         
         HStack {
-            Image(systemName: item.isComplete ? "checkmark.circle" : "circle")
-                .foregroundColor(item.isComplete ? .mint : .red)
+            Image(systemName: item.isCompleted ? "checkmark.circle" : "circle")
+                .foregroundColor(item.isCompleted ? .mint : .red)
             
             Text(item.title)
         }
@@ -25,8 +25,8 @@ struct ListRowView: View {
 }
 
 #Preview {
-    var item1 = ItemModel(title: "first", isComplete: false)
-    var item2 = ItemModel(title: "second", isComplete: true)
+    var item1 = ItemModel(title: "first", isCompleted: false)
+    var item2 = ItemModel(title: "second", isCompleted: true)
     
    return Group {
         ListRowView(item: item1)

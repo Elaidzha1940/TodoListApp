@@ -19,9 +19,9 @@ class ListViewModel: ObservableObject {
     
     func getItems() {
         let newItems = [
-            ItemModel(title: "first", isComplete: false),
-            ItemModel(title: "second", isComplete: true),
-            ItemModel(title: "third", isComplete: false),
+            ItemModel(title: "first", isCompleted: false),
+            ItemModel(title: "second", isCompleted: true),
+            ItemModel(title: "third", isCompleted: false),
         ]
         items.append(contentsOf: newItems)
     }
@@ -35,7 +35,7 @@ class ListViewModel: ObservableObject {
     }
     
     func addItem(title: String) {
-        let newItem = ItemModel(title: title, isComplete: false)
+        let newItem = ItemModel(title: title, isCompleted: false)
         items.append(newItem)
     }
     
@@ -46,7 +46,7 @@ class ListViewModel: ObservableObject {
         //        } {
         
         if let index = items.firstIndex(where: { $0.id == item.id }) {
-            items[index] = ItemModel(title: item.title, isComplete: !item.isComplete)
+            items[index] = item.updateCompletion()
         }
     }
 }
