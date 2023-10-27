@@ -38,4 +38,15 @@ class ListViewModel: ObservableObject {
         let newItem = ItemModel(title: title, isComplete: false)
         items.append(newItem)
     }
+    
+    func updateItem(item: ItemModel) {
+        
+        //        if let index = items.firstIndex { (existingItem) in
+        //            return existingItem.id == item.id
+        //        } {
+        
+        if let index = items.firstIndex(where: { $0.id == item.id }) {
+            items[index] = ItemModel(title: item.title, isComplete: !item.isComplete)
+        }
+    }
 }
