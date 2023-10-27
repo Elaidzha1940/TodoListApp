@@ -16,11 +16,11 @@ struct ListView: View {
         
         VStack {
             List {
-                ForEach(items) { item in
+                ForEach(listViewModel.items) { item in
                     ListRowView(item: item)
                 }
-                .onDelete(perform: deleteItem)
-                .onMove(perform: moveItem)
+                .onDelete(perform: listViewModel.deleteItem)
+                .onMove(perform: listViewModel.moveItem)
             }
             .listStyle(PlainListStyle())
             .navigationTitle("Todo List 🖋️")
@@ -33,19 +33,12 @@ struct ListView: View {
         }
         .accentColor(.black)
     }
-    
-    func deleteItem(indexSet: IndexSet) {
-        items.remove(atOffsets: indexSet)
-    }
-    
-    func moveItem(from: IndexSet , to: Int) {
-        items.move(fromOffsets: from, toOffset: to)
-    }
 }
 
 #Preview {
     NavigationView {
         ListView()
     }
+    .environmentObject(ListViewModel())
 }
 
