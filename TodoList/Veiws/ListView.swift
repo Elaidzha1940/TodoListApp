@@ -27,7 +27,7 @@ struct ListView: View {
             .navigationBarItems(
                 leading: EditButton(),
                 trailing:
-                    NavigationLink("Add", destination: AddView())
+                    NavigationLink("Add", destination: AddView(alertTitle: String()))
             )
             .font(.system(size: 20, weight: .semibold, design: .rounded))
         }
