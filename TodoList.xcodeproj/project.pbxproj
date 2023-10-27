@@ -14,6 +14,7 @@
 		E48A4F272AEAC83D008C2EFF /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A4F262AEAC83D008C2EFF /* ListRowView.swift */; };
 		E48A4F292AEAD40E008C2EFF /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A4F282AEAD40E008C2EFF /* AddView.swift */; };
 		E48A4F2D2AEB2944008C2EFF /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A4F2C2AEB2944008C2EFF /* ItemModel.swift */; };
+		E48A4F312AEBE36F008C2EFF /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A4F302AEBE36F008C2EFF /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E48A4F262AEAC83D008C2EFF /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		E48A4F282AEAD40E008C2EFF /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		E48A4F2C2AEB2944008C2EFF /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		E48A4F302AEBE36F008C2EFF /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +61,8 @@
 			children = (
 				E48A4F152AEAC38A008C2EFF /* TodoListApp.swift */,
 				E48A4F2A2AEB28ED008C2EFF /* Models */,
-				E48A4F232AEAC5A6008C2EFF /* Veiws */,
 				E48A4F2B2AEB291D008C2EFF /* ViewModels */,
+				E48A4F232AEAC5A6008C2EFF /* Veiws */,
 				E48A4F192AEAC38A008C2EFF /* Assets.xcassets */,
 				E48A4F1B2AEAC38A008C2EFF /* Preview Content */,
 			);
@@ -96,6 +98,7 @@
 		E48A4F2B2AEB291D008C2EFF /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E48A4F302AEBE36F008C2EFF /* ListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				E48A4F2D2AEB2944008C2EFF /* ItemModel.swift in Sources */,
 				E48A4F292AEAD40E008C2EFF /* AddView.swift in Sources */,
+				E48A4F312AEBE36F008C2EFF /* ListViewModel.swift in Sources */,
 				E48A4F252AEAC5B3008C2EFF /* ListView.swift in Sources */,
 				E48A4F162AEAC38A008C2EFF /* TodoListApp.swift in Sources */,
 				E48A4F272AEAC83D008C2EFF /* ListRowView.swift in Sources */,

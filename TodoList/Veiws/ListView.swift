@@ -23,6 +23,8 @@ struct ListView: View {
                 ForEach(items) { item in
                     ListRowView(item: item)
                 }
+                .onDelete(perform: deleteItem)
+                .onMove(perform: moveItem)
             }
             .listStyle(PlainListStyle())
             .navigationTitle("Todo List 🖋️")
@@ -34,6 +36,14 @@ struct ListView: View {
             .font(.system(size: 20, weight: .semibold, design: .rounded))
         }
         .accentColor(.black)
+    }
+    
+    func deleteItem(indexSet: IndexSet) {
+        items.remove(atOffsets: indexSet)
+    }
+    
+    func moveItem(from: IndexSet , to: Int) {
+        items.move(fromOffsets: from, toOffset: to)
     }
 }
 
