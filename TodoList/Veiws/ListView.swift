@@ -17,7 +17,7 @@ struct ListView: View {
         VStack {
             ZStack {
                 if listViewModel.items.isEmpty {
-                    Text("No items")
+                    NoItemsView()
                 } else {
                     List {
                         ForEach(listViewModel.items) { item in

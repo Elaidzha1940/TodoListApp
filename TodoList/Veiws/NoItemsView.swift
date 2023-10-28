@@ -11,6 +11,7 @@ import SwiftUI
 
 struct NoItemsView: View {
     @State var animate: Bool = false
+    let secondaryAccentColor = Color("SecondaryAccentColor")
     
     var body: some View {
         
@@ -28,12 +29,12 @@ struct NoItemsView: View {
                         .font(.system(size: 20, weight: .semibold, design: .rounded))
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
-                        .background(animate ? Color.mint : Color.black)
+                        .background(animate ? secondaryAccentColor : Color.black)
                         .cornerRadius(15)
                 }
                 .padding(.horizontal, animate ? 25 : 75)
                 .shadow(
-                    color: animate ? Color.mint.opacity(0.5) : Color.black.opacity(0.5),
+                    color: animate ? secondaryAccentColor.opacity(0.7) : Color.black.opacity(0.7),
                     radius: animate ? 30 : 10,
                     x: 0,
                     y: animate ? 25 : 75)
