@@ -32,6 +32,11 @@ struct NoItemsView: View {
                         .cornerRadius(15)
                 }
                 .padding(.horizontal, animate ? 25 : 75)
+                .shadow(
+                    color: animate ? Color.mint.opacity(0.5) : Color.black.opacity(0.5),
+                    radius: animate ? 30 : 10,
+                    x: 0,
+                    y: animate ? 25 : 75)
                 .scaleEffect(animate ? 1.1 : 1.0)
                 .offset(y: animate ? -5 : 0)
             }
