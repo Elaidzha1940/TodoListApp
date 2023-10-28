@@ -32,10 +32,10 @@ struct AddView: View {
                     saveButtonPressed()
                 }, label: {
                     Text("Save")
+                        .foregroundColor(.white)
                         .font(.system(size: 20, weight: .semibold, design: .rounded))
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
-                        .foregroundColor(.white)
                         .background(Color.black)
                         .cornerRadius(15)
                 })
