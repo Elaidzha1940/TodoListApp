@@ -35,11 +35,17 @@ struct NoItemsView: View {
             }
             .padding(30)
             .multilineTextAlignment(.center)
-            .onAppear {
-                
-            }
+            .onAppear(perform: addAnimation)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+    
+    func addAnimation() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            withAnimation(.easeInOut(duration: 2)) {
+                animate.toggle()
+            }
+        }
     }
 }
 
