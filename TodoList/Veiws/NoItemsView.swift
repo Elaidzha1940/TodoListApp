@@ -28,10 +28,12 @@ struct NoItemsView: View {
                         .font(.system(size: 20, weight: .semibold, design: .rounded))
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
-                        .background(Color.black)
+                        .background(animate ? Color.mint : Color.black)
                         .cornerRadius(15)
-
                 }
+                .padding(.horizontal, animate ? 25 : 75)
+                .scaleEffect(animate ? 1.1 : 1.0)
+                .offset(y: animate ? -5 : 0)
             }
             .padding(30)
             .multilineTextAlignment(.center)
@@ -41,8 +43,13 @@ struct NoItemsView: View {
     }
     
     func addAnimation() {
+        guard !animate else { return }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            withAnimation(.easeInOut(duration: 2)) {
+            withAnimation(
+            Animation
+                .easeInOut(duration: 2.0)
+                .repeatForever()
+            ) {
                 animate.toggle()
             }
         }
