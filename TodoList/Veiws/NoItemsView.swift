@@ -52,9 +52,9 @@ struct NoItemsView: View {
         guard !animate else { return }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             withAnimation(
-            Animation
-                .easeInOut(duration: 2.0)
-                .repeatForever()
+                Animation
+                    .easeInOut(duration: 2.0)
+                    .repeatForever()
             ) {
                 animate.toggle()
             }

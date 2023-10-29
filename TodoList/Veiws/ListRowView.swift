@@ -28,7 +28,7 @@ struct ListRowView: View {
     let item1 = ItemModel(title: "first", isCompleted: false)
     let item2 = ItemModel(title: "second", isCompleted: true)
     
-   return Group {
+    return Group {
         ListRowView(item: item1)
         ListRowView(item: item2)
     }

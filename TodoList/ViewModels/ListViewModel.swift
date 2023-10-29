@@ -35,14 +35,14 @@ class ListViewModel: ObservableObject {
     }
     
     func getItems() {
-//        let newItems = [
-//            ItemModel(title: "first", isCompleted: false),
-//            ItemModel(title: "second", isCompleted: true),
-//            ItemModel(title: "third", isCompleted: false),
-//        ]
-//        items.append(contentsOf: newItems)
+        //        let newItems = [
+        //            ItemModel(title: "first", isCompleted: false),
+        //            ItemModel(title: "second", isCompleted: true),
+        //            ItemModel(title: "third", isCompleted: false),
+        //        ]
+        //        items.append(contentsOf: newItems)
         
-        guard 
+        guard
             let data = UserDefaults.standard.data(forKey: itemsKey),
             let savedItem = try? JSONDecoder().decode([ItemModel].self, from: data)
         else { return }
@@ -74,9 +74,9 @@ class ListViewModel: ObservableObject {
         }
     }
     
-   func saveItems() {
-       if let encodedData = try? JSONEncoder().encode(items) {
-           UserDefaults.standard.set(encodedData, forKey: itemsKey)
-       }
+    func saveItems() {
+        if let encodedData = try? JSONEncoder().encode(items) {
+            UserDefaults.standard.set(encodedData, forKey: itemsKey)
+        }
     }
 }
