@@ -29,7 +29,7 @@ struct TodoListApp: App {
                 ListView()
             }
             .environmentObject(ListViewModel())
-            //.preferredColorScheme(.light)
+            .navigationViewStyle(.stack)
         }
     }
 }

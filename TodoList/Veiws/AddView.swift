@@ -25,7 +25,7 @@ struct AddView: View {
                     .font(.system(size: 20, weight: .semibold, design: .rounded))
                     .padding(.horizontal)
                     .frame(height: 55)
-                    .background(Color.gray.opacity(0.5))
+                    .background(Color(UIColor.secondarySystemBackground))
                     .cornerRadius(15)
                 
                 Button(action: {
