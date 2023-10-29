@@ -18,6 +18,7 @@ struct ListView: View {
             ZStack {
                 if listViewModel.items.isEmpty {
                     NoItemsView()
+                        .transition(AnyTransition.opacity.animation(.easeIn))
                 } else {
                     List {
                         ForEach(listViewModel.items) { item in
@@ -42,7 +43,6 @@ struct ListView: View {
             )
             .font(.system(size: 20, weight: .semibold, design: .rounded))
         }
-        .accentColor(.black)
     }
 }
 

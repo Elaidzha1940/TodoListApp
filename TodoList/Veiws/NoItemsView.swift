@@ -29,12 +29,12 @@ struct NoItemsView: View {
                         .font(.system(size: 20, weight: .semibold, design: .rounded))
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
-                        .background(animate ? secondaryAccentColor : Color.black)
+                        .background(animate ? secondaryAccentColor : Color.accentColor)
                         .cornerRadius(15)
                 }
                 .padding(.horizontal, animate ? 25 : 75)
                 .shadow(
-                    color: animate ? secondaryAccentColor.opacity(0.7) : Color.black.opacity(0.7),
+                    color: animate ? secondaryAccentColor.opacity(0.7) : Color.accentColor.opacity(0.7),
                     radius: animate ? 30 : 10,
                     x: 0,
                     y: animate ? 25 : 75)

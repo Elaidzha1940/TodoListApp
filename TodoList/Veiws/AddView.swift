@@ -36,7 +36,7 @@ struct AddView: View {
                         .font(.system(size: 20, weight: .semibold, design: .rounded))
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
-                        .background(Color.black)
+                        .background(Color.accentColor)
                         .cornerRadius(15)
                 })
             }
