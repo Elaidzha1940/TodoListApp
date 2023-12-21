@@ -1,10 +1,9 @@
 Launch Screen / Splash Screen.
 ==============================
 
-
 https://github.com/Elaidzha1940/TodoListApp/assets/64445918/c88c8d47-2df3-408e-80c5-43fa049d5290
 
-https://github.com/Elaidzha1940/TodoListApp/assets/64445918/6d3c379d-059c-472a-9ffb-5bab30253a7e
+https://github.com/Elaidzha1940/TodoListApp/assets/64445918/d15aae2d-312e-494a-8a7d-61b662fa7194
 
 1. Adding items to the list.
 2. Moving item in the list.
